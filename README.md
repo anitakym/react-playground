@@ -1,3 +1,19 @@
+### basics
+基于create-react-app构建
+### tips
+engines:
+因为test的原因，node版本需要大于14.17.0
+不然
+```
+ import { PatternPrompt, printPatternCaret, printRestoredPatternCaret } from 'jest-watcher';
+                            ^^^^^^^^^^^^^^^^^
+    SyntaxError: Named export 'printPatternCaret' not found. The requested module 'jest-watcher' is a CommonJS module, which may not support all module.exports as named exports.
+    CommonJS modules can always be imported via the default export, for example using:
+
+    import pkg from 'jest-watcher';
+    const { PatternPrompt, printPatternCaret, printRestoredPatternCaret } = pkg;
+```
+- https://github.com/facebook/create-react-app/issues/11792
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
